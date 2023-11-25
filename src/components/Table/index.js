@@ -6,9 +6,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { updateProduct, updateStatus } from "../../reducers/orderReducer";
 
-import CloseIcon from "../../Assets/Icons/CloseIcons";
-import TickIcon from "../../Assets/Icons/TickIcons";
-import { Button } from "../../Assets/styles/styles";
+import CloseIcon from "../../assets/Icons/CloseIcons";
+import TickIcon from "../../assets/Icons/TickIcons";
+import { Button } from "../../assets/Styles/styles";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -200,12 +200,12 @@ const SearchOrAddItemContainer = styled.div`
   padding: 14px 60px;
 `;
 const SearchInputBox = styled.input`
-  border-radius: 20px 0px 0px 20px;
+  border-radius: 20px 20px 20px 20px;
   padding-left: 15px;
   border: 1px solid rgb(209, 209, 209);
-  width: 200px;
+  width: 250px;
   height: 30px;
-  border-right: none;
+  
 `;
 
 const AddItemButton = styled.button`
@@ -215,22 +215,6 @@ const AddItemButton = styled.button`
   background: #fff;
   color: rgb(30, 99, 63);
   border: 1px solid rgb(30, 99, 63);
-`;
-
-const PrinterIcon = styled.img`
-  height: 25px;
-  width: 25px;
-  margin-left: 20px;
-`;
-const SearchIcon = styled.img`
-  height: 22px;
-  width: 30px;
-  padding: 5px;
-  margin-left: 20px;
-  border: 1px solid rgb(209, 209, 209);
-  margin-left: 0px;
-  border-left: none;
-  border-radius: 0px 20px 20px 0px;
 `;
 
 const AddContainer = styled.div`
@@ -308,19 +292,9 @@ function Table() {
         <SearchOrAddItemContainer>
           <SearchContainer>
             <SearchInputBox defaultValue={"Search..."} type="text" disabled />
-            <SearchIcon
-              src=""
-              
-              
-              alt="search"
-            />
           </SearchContainer>
           <AddContainer>
             <AddItemButton disabled>{"Add Item"}</AddItemButton>
-            <PrinterIcon
-              src=""
-              alt="print"
-            />
           </AddContainer>
         </SearchOrAddItemContainer>
         <Container>
@@ -369,12 +343,12 @@ function Table() {
                 </td>{" "}
                 <td>
                   <Text level={2} lineHeight={1.3}>
-                   $ {product.price}{" "}
+                    $ {product.price}{" "}
                   </Text>
                 </td>{" "}
                 <td>
                   <Text level={2} lineHeight={1.3}>
-                     {product.quantity}{" "}
+                    {product.quantity}{" "}
                   </Text>
                 </td>{" "}
                 <td>
