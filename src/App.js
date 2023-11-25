@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "styled-components";
+import "./App.css";
+import Reeco from "./components/Reeco";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const typography = {
+  fontSizes: ["12px", "14px", "16px", "20px", "24px", "34px"],
+  fontWeight: ["normal", "medium"],
+  letterSpacing: ["0.4px", "0.1px", "1.25px", "0.25px", "0.5px"],
+  colors: ["#000", "#d1d1d1"],
+};
+
+const App = () => (
+  <ThemeProvider theme={{ typography: typography }}>
+    <Reeco />
+  </ThemeProvider>
+);
 
 export default App;
